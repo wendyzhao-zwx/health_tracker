@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   PageController _pageController = PageController();
 
-  List<Widget> _screens = [
+  List<Widget> _primary = [
     HomePage(),
     BrowsePage(),
     CalendarPage(),
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: PageView(
         controller: _pageController,
-        children: _screens,
+        children: _primary,
         onPageChanged: _onPageChanged,
         physics: NeverScrollableScrollPhysics(),
       ),
