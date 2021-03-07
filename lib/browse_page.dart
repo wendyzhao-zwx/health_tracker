@@ -8,6 +8,7 @@ class BrowsePage extends StatefulWidget {
 }
 
 class _BrowsePageState extends State<BrowsePage> {
+<<<<<<< HEAD
   final List<String> titles = <String>[
     "  Daily Activity",
     "  Exercise",
@@ -28,6 +29,8 @@ class _BrowsePageState extends State<BrowsePage> {
     Icons.invert_colors_rounded,
   ];
 
+=======
+>>>>>>> 5f52dd1b5a108ab16ef4491bf249677f2d9705eb
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +39,7 @@ class _BrowsePageState extends State<BrowsePage> {
         title: Text('Browse'),
       ),
       body: ListView.builder(
+<<<<<<< HEAD
           itemCount: 7,
           itemBuilder: (context, index) {
             return Container(
@@ -118,6 +122,31 @@ class _BrowsePageState extends State<BrowsePage> {
       //             ]),
       //       )),
       // ),
+=======
+          itemCount: 500,
+          itemBuilder: (context, index) {
+            return Card(
+                color: index % 2 == 0 ? Colors.grey.shade600 : null,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(children: <Widget>[
+                    Text(
+                      'Title of Blog ${index + 1}',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: index % 2 == 0 ? Colors.white : null,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text('some great and interesting text',
+                        style: TextStyle(
+                          color: index % 2 == 0 ? Colors.white : null,
+                        ))
+                  ]),
+                ));
+          }),
+>>>>>>> 5f52dd1b5a108ab16ef4491bf249677f2d9705eb
     );
   }
 }
