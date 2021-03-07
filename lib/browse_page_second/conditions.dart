@@ -2,13 +2,53 @@ import 'package:flutter/material.dart';
 
 class Conditions extends StatelessWidget {
   final List<String> titles = <String>[
-    "  Daily Activity",
-    "  Exercise",
-    "  Body Measurements",
-    "  Body Condition",
-    "  Health Data",
-    "  Sleep",
-    "  Period",
+    "  Headache",
+    "  Anxiety",
+    "  Mental Stress",
+    "  Tiredness",
+    "  Drowsiness",
+    "  Nausea",
+    "  Short of Breath",
+  ];
+
+  final List<IconData> icons = <IconData>[
+    Icons.sentiment_satisfied_rounded,
+    Icons.sentiment_satisfied_rounded,
+    Icons.sentiment_satisfied_rounded,
+    Icons.sentiment_neutral_rounded,
+    Icons.sentiment_dissatisfied_rounded,
+    Icons.sentiment_dissatisfied_rounded,
+    Icons.sentiment_satisfied_rounded,
+  ];
+
+  final List<String> number1 = <String>[
+    "",
+    "",
+    "0       1       ",
+    "0      1       2       ",
+    "0      1       2       3       ",
+    "",
+    "",
+  ];
+
+  final List<String> number2 = <String>[
+    "0",
+    "0",
+    "2",
+    "3",
+    "4",
+    "0",
+    "0",
+  ];
+
+  final List<String> number3 = <String>[
+    "       1       2       3       4",
+    "       1       2       3       4",
+    "       3       4",
+    "       4",
+    "",
+    "       1       2       3       4",
+    "       1       2       3       4",
   ];
 
   @override
@@ -23,43 +63,84 @@ class Conditions extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                height: 100,
+                height: 150,
                 width: double.maxFinite,
                 child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 32.0,
-                    top: 16.0,
-                    right: 16.0,
-                    bottom: 16.0,
-                  ),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            child: RichText(
+                      padding: const EdgeInsets.only(
+                        left: 32.0,
+                        top: 16.0,
+                        right: 32.0,
+                        bottom: 16.0,
+                      ),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Container(
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      WidgetSpan(
+                                        child: Icon(icons[index],
+                                            size: 20, color: Colors.green[900]),
+                                      ),
+                                      TextSpan(
+                                        text: titles[index],
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          color: Colors.green[900],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.topRight,
+                              child: Text(
+                                'Mar 7, 2021',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.green[900],
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 15),
+                            RichText(
                               text: TextSpan(
                                 children: [
-                                  //   WidgetSpan(
-                                  //     child:
-                                  //         Icon(icons[index]),
-                                  //   ),
                                   TextSpan(
-                                    text: titles[index],
+                                    text: number1[index],
                                     style: TextStyle(
-                                      fontSize: 22,
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: number2[index],
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.green[900],
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: number3[index],
+                                    style: TextStyle(
+                                      fontSize: 20,
                                       color: Colors.black,
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
-                        ),
-                      ]),
-                )));
+                          ]),
+                    )));
           }),
     );
   }
