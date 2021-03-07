@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
 
 class HealthData extends StatelessWidget {
-  final List<String> titles = <String>[
-    "  Daily Activity",
-    "  Exercise",
-    "  Body Measurements",
-    "  Body Condition",
-    "  Health Data",
-    "  Sleep",
-    "  Period",
-  ];
+  // final List<String> titles = <String>[
+  //   "  Daily Activity",
+  //   "  Exercise",
+  //   "  Body Measurements",
+  //   "  Body Condition",
+  //   "  Health Data",
+  //   "  Sleep",
+  //   "  Period",
+  // ];
+
+  // final List<String> date = <String>[
+  //   "Mar 7, 2021",
+  //   "Mar 7, 2021",
+  //   "Mar 7, 2021",
+  //   "Mar 7, 2021",
+  //   "Mar 7, 2021",
+  //   "Mar 7, 2021",
+  //   "Mar 7, 2021",
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +74,7 @@ class HealthData extends StatelessWidget {
                             Align(
                               alignment: Alignment.topRight,
                               child: Text(
-                                'Mar 7, 2021',
+                                'Mar 7, 2021', //date[index],
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: Colors.green[900],

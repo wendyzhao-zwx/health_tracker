@@ -2,13 +2,51 @@ import 'package:flutter/material.dart';
 
 class DailyActivity extends StatelessWidget {
   final List<String> titles = <String>[
-    "  Daily Activity",
-    "  Exercise",
-    "  Body Measurements",
-    "  Body Condition",
-    "  Health Data",
-    "  Sleep",
-    "  Period",
+    "  Water Drinked",
+    "  Sodium Intake",
+    "  Cigarettes",
+    "  Alchohol",
+    "  Screen Time",
+  ];
+
+  final List<String> date = <String>[
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+  ];
+
+  final List<String> content1 = <String>[
+    "8",
+    "2",
+    "0",
+    "Beer: 300",
+    "11",
+  ];
+
+  final List<String> unit1 = <String>[
+    " cups",
+    " g",
+    "",
+    " mL",
+    " hrs ",
+  ];
+
+  final List<String> content2 = <String>[
+    "",
+    "",
+    "",
+    "",
+    "41",
+  ];
+
+  final List<String> unit2 = <String>[
+    "",
+    "",
+    "",
+    "",
+    " min",
   ];
 
   @override
@@ -19,7 +57,7 @@ class DailyActivity extends StatelessWidget {
         title: Text("Daily Activity"),
       ),
       body: ListView.builder(
-          itemCount: 1,
+          itemCount: 5,
           itemBuilder: (context, index) {
             return Container(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
@@ -46,11 +84,11 @@ class DailyActivity extends StatelessWidget {
                                   text: TextSpan(
                                     children: [
                                       WidgetSpan(
-                                        child: Icon(Icons.hotel_rounded,
+                                        child: Icon(Icons.emoji_people_rounded,
                                             size: 20, color: Colors.green[900]),
                                       ),
                                       TextSpan(
-                                        text: '  Time in Bed',
+                                        text: titles[index],
                                         style: TextStyle(
                                           fontSize: 17,
                                           color: Colors.green[900],
@@ -64,7 +102,7 @@ class DailyActivity extends StatelessWidget {
                             Align(
                               alignment: Alignment.topRight,
                               child: Text(
-                                'Mar 7, 2021',
+                                date[index],
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: Colors.green[900],
@@ -76,31 +114,31 @@ class DailyActivity extends StatelessWidget {
                               text: TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: '10 ',
+                                    text: content1[index],
                                     style: TextStyle(
                                       fontSize: 30,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: 'hrs ',
-                                    style: TextStyle(
-                                      fontSize: 20,
                                       color: Colors.green[900],
                                     ),
                                   ),
                                   TextSpan(
-                                    text: '37 ',
+                                    text: unit1[index],
                                     style: TextStyle(
-                                      fontSize: 30,
+                                      fontSize: 20,
                                       color: Colors.black,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: 'min',
+                                    text: content2[index],
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.green[900],
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: unit2[index],
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.green[900],
+                                      color: Colors.black,
                                     ),
                                   ),
                                 ],

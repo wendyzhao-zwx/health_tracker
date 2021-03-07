@@ -1,24 +1,37 @@
 import 'package:flutter/material.dart';
 
 class Conditions extends StatelessWidget {
-  final List<String> titles = <String>[
-    "  Headache",
-    "  Anxiety",
-    "  Mental Stress",
-    "  Tiredness",
-    "  Drowsiness",
-    "  Nausea",
-    "  Short of Breath",
-  ];
-
   final List<IconData> icons = <IconData>[
     Icons.sentiment_satisfied_rounded,
     Icons.sentiment_satisfied_rounded,
     Icons.sentiment_satisfied_rounded,
     Icons.sentiment_neutral_rounded,
+    Icons.sentiment_satisfied_rounded,
     Icons.sentiment_dissatisfied_rounded,
     Icons.sentiment_dissatisfied_rounded,
     Icons.sentiment_satisfied_rounded,
+  ];
+
+  final List<String> titles = <String>[
+    "  Headache",
+    "  Anxiety",
+    "  Mental Stress",
+    "  Fatigue",
+    "  Confusion",
+    "  Drowsiness",
+    "  Nausea",
+    "  Short of Breath",
+  ];
+
+  final List<String> date = <String>[
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
+    "Mar 7, 2021",
   ];
 
   final List<String> number1 = <String>[
@@ -26,6 +39,7 @@ class Conditions extends StatelessWidget {
     "",
     "0       1       ",
     "0      1       2       ",
+    "",
     "0      1       2       3       ",
     "",
     "",
@@ -36,6 +50,7 @@ class Conditions extends StatelessWidget {
     "0",
     "2",
     "3",
+    "0",
     "4",
     "0",
     "0",
@@ -46,6 +61,7 @@ class Conditions extends StatelessWidget {
     "       1       2       3       4",
     "       3       4",
     "       4",
+    "       1       2       3       4",
     "",
     "       1       2       3       4",
     "       1       2       3       4",
@@ -59,7 +75,7 @@ class Conditions extends StatelessWidget {
         title: Text("Conditions"),
       ),
       body: ListView.builder(
-          itemCount: 7,
+          itemCount: 8,
           itemBuilder: (context, index) {
             return Container(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
@@ -104,7 +120,7 @@ class Conditions extends StatelessWidget {
                             Align(
                               alignment: Alignment.topRight,
                               child: Text(
-                                'Mar 7, 2021',
+                                date[index],
                                 style: TextStyle(
                                   fontSize: 12,
                                   color: Colors.green[900],
