@@ -9,13 +9,13 @@ class BrowsePage extends StatefulWidget {
 
 class _BrowsePageState extends State<BrowsePage> {
   final List<String> titles = <String>[
-    "  Daily Activity",
-    "  Exercise",
-    "  Body Measurements",
-    "  Body Condition",
-    "  Health Data",
-    "  Sleep",
-    "  Period",
+    "  Daily Activity  ",
+    "  Exercise  ",
+    "  Body Measurements  ",
+    "  Body Condition  ",
+    "  Health Data  ",
+    "  Sleep  ",
+    "  Period  ",
   ];
 
   final List<IconData> icons = <IconData>[
@@ -42,51 +42,128 @@ class _BrowsePageState extends State<BrowsePage> {
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                 height: 100,
                 width: double.maxFinite,
-                child: Card(
-                    child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 32.0,
-                    top: 16.0,
-                    right: 16.0,
-                    bottom: 16.0,
-                  ),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            child: RichText(
-                              text: TextSpan(
-                                children: [
-                                  WidgetSpan(
-                                    child:
-                                        Icon(icons[index]), //cardIcon(index)),
-                                  ),
-                                  TextSpan(
-                                    text: titles[index], //cardTitle(index),
-                                    //textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                      color: Colors.black,
-                                      // fontWeight: FontWeight.bold,
+                child: InkWell(
+                  child: Card(
+                      child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 32.0,
+                      top: 16.0,
+                      right: 16.0,
+                      bottom: 16.0,
+                    ),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          //FlatButton(
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              child: RichText(
+                                text: TextSpan(
+                                  children: [
+                                    WidgetSpan(
+                                      child: Icon(
+                                          icons[index]), //cardIcon(index)),
                                     ),
-                                  ),
-                                ],
+                                    TextSpan(
+                                      text: titles[index], //cardTitle(index),
+                                      //textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 22,
+                                        color: Colors.black,
+                                        // fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    WidgetSpan(
+                                      child: Icon(Icons
+                                          .keyboard_arrow_right_rounded), //cardIcon(index)),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              // child: Text(
+                              //   cardTitle(index),
+                              //   //textAlign: TextAlign.center,
+                              //   style: TextStyle(
+                              //     fontSize: 25,
+                              //     // fontWeight: FontWeight.bold,
+                              //   ),
+                              // ),
                             ),
-                            // child: Text(
-                            //   cardTitle(index),
-                            //   //textAlign: TextAlign.center,
-                            //   style: TextStyle(
-                            //     fontSize: 25,
-                            //     // fontWeight: FontWeight.bold,
-                            //   ),
-                            // ),
                           ),
-                        ),
-                      ]),
-                )));
+                          // onPressed: () {
+                          //   Navigator.push(context, MaterialPageRoute<void>(
+                          //     builder: (BuildContext context) {
+                          //       return Scaffold(
+                          //         appBar: AppBar(title: Text('My Page')),
+                          //         body: Center(
+                          //           child: FlatButton(
+                          //             child: Text('POP'),
+                          //             onPressed: () {
+                          //               Navigator.pop(context);
+                          //             },
+                          //           ),
+                          //         ),
+                          //       );
+                          //     },
+                          //   ));
+                          // }),
+                          // Align(
+                          //   alignment: Alignment.centerLeft,
+                          //   child: Container(
+                          //     child: RichText(
+                          //       text: TextSpan(
+                          //         children: [
+                          //           WidgetSpan(
+                          //             child: Icon(
+                          //                 icons[index]), //cardIcon(index)),
+                          //           ),
+                          //           TextSpan(
+                          //             text: titles[index], //cardTitle(index),
+                          //             //textAlign: TextAlign.center,
+                          //             style: TextStyle(
+                          //               fontSize: 22,
+                          //               color: Colors.black,
+                          //               // fontWeight: FontWeight.bold,
+                          //             ),
+                          //           ),
+                          //           WidgetSpan(
+                          //             child: Icon(Icons
+                          //                 .keyboard_arrow_right_rounded), //cardIcon(index)),
+                          //           ),
+                          //         ],
+                          //       ),
+                          //     ),
+                          //     // child: Text(
+                          //     //   cardTitle(index),
+                          //     //   //textAlign: TextAlign.center,
+                          //     //   style: TextStyle(
+                          //     //     fontSize: 25,
+                          //     //     // fontWeight: FontWeight.bold,
+                          //     //   ),
+                          //     // ),
+                          //   ),
+                          // ),
+                        ]),
+                  )),
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute<void>(
+                      builder: (BuildContext context) {
+                        return Scaffold(
+                          appBar: AppBar(title: Text('My Page')),
+                          body: Center(
+                            child: FlatButton(
+                              child: Text('POP'),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            ),
+                          ),
+                        );
+                      },
+                    ));
+                  },
+                ));
           }),
       // body: Container(
       //   padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
