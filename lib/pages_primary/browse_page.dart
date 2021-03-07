@@ -53,7 +53,7 @@ class _BrowsePageState extends State<BrowsePage> {
         title: Text('Browse'),
       ),
       body: ListView.builder(
-          itemCount: 7,
+          itemCount: 6,
           itemBuilder: (context, index) {
             return Container(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
