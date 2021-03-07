@@ -60,64 +60,23 @@ class _HomePageState extends State<HomePage> {
                               text: TextSpan(
                                 children: [
                                   WidgetSpan(
-                                    child:
-                                        Icon(icons[index]), //cardIcon(index)),
+                                    child: Icon(icons[index]),
                                   ),
                                   TextSpan(
-                                    text: titles[index], //cardTitle(index),
-                                    //textAlign: TextAlign.center,
+                                    text: titles[index],
                                     style: TextStyle(
                                       fontSize: 22,
                                       color: Colors.black,
-                                      // fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                            // child: Text(
-                            //   cardTitle(index),
-                            //   //textAlign: TextAlign.center,
-                            //   style: TextStyle(
-                            //     fontSize: 25,
-                            //     // fontWeight: FontWeight.bold,
-                            //   ),
-                            // ),
                           ),
                         ),
                       ]),
                 )));
           }),
-      // body: Container(
-      //   padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-      //   height: 125,
-      //   width: double.maxFinite,
-      //   child: Card(
-      //       shape: RoundedRectangleBorder(
-      //         borderRadius: BorderRadius.circular(15.0),
-      //       ),
-      //       child: Padding(
-      //         padding: const EdgeInsets.all(20.0),
-      //         child: Column(
-      //             mainAxisAlignment: MainAxisAlignment.center,
-      //             children: <Widget>[
-      //               Align(
-      //                 alignment: Alignment.center,
-      //                 child: Container(
-      //                   child: Text(
-      //                     "Should be left",
-      //                     textAlign: TextAlign.center,
-      //                     style: TextStyle(
-      //                       fontSize: 25,
-      //                       // fontWeight: FontWeight.bold,
-      //                     ),
-      //                   ),
-      //                 ),
-      //               ),
-      //               SizedBox(height: 10),
-      //             ]),
-      //       )),
-      // ),
     );
   }
 }

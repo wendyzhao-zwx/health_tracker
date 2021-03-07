@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:health_tracker/browse_page.dart';
-import 'package:health_tracker/calendar_page.dart';
-import 'package:health_tracker/explore_page.dart';
-import 'package:health_tracker/home_page.dart';
-import 'package:health_tracker/settings_page.dart';
+import 'package:health_tracker/pages_primary/browse_page.dart';
+import 'package:health_tracker/pages_primary/calendar_page.dart';
+import 'package:health_tracker/pages_primary/explore_page.dart';
+import 'package:health_tracker/pages_primary/home_page.dart';
+import 'package:health_tracker/pages_primary/settings_page.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
