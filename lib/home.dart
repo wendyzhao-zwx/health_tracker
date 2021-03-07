@@ -18,9 +18,9 @@ class _HomeState extends State<Home> {
   List<Widget> _primary = [
     HomePage(),
     BrowsePage(),
-    CalendarPage(),
+    //CalendarPage(),
     ExplorePage(),
-    SettingsPage()
+    //SettingsPage()
   ];
 
   int _selectedIndex = 0;
@@ -66,32 +66,41 @@ class _HomeState extends State<Home> {
                       fontSize: _selectedIndex == 1 ? 14 : 12,
                       color:
                           _selectedIndex == 1 ? Colors.green : Colors.grey))),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.calendar_today_rounded,
+          //       size: _selectedIndex == 2 ? 26 : null,
+          //       color: _selectedIndex == 2 ? Colors.green : Colors.grey),
+          //   title: Text('Calendar',
+          //       style: TextStyle(
+          //           fontSize: _selectedIndex == 2 ? 14 : 12,
+          //           color: _selectedIndex == 2 ? Colors.green : Colors.grey)),
+          // ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today_rounded,
+            icon: Icon(Icons.search,
                 size: _selectedIndex == 2 ? 26 : null,
                 color: _selectedIndex == 2 ? Colors.green : Colors.grey),
-            title: Text('Calendar',
+            title: Text('Explore',
                 style: TextStyle(
                     fontSize: _selectedIndex == 2 ? 14 : 12,
                     color: _selectedIndex == 2 ? Colors.green : Colors.grey)),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search,
-                size: _selectedIndex == 3 ? 26 : null,
-                color: _selectedIndex == 3 ? Colors.green : Colors.grey),
-            title: Text('Explore',
-                style: TextStyle(
-                    fontSize: _selectedIndex == 3 ? 14 : 12,
-                    color: _selectedIndex == 3 ? Colors.green : Colors.grey)),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings,
-                  size: _selectedIndex == 4 ? 26 : null,
-                  color: _selectedIndex == 4 ? Colors.green : Colors.grey),
-              title: Text('Settings',
-                  style: TextStyle(
-                      fontSize: _selectedIndex == 4 ? 14 : 12,
-                      color: _selectedIndex == 4 ? Colors.green : Colors.grey)))
+          )
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.search,
+          //       size: _selectedIndex == 3 ? 26 : null,
+          //       color: _selectedIndex == 3 ? Colors.green : Colors.grey),
+          //   title: Text('Explore',
+          //       style: TextStyle(
+          //           fontSize: _selectedIndex == 3 ? 14 : 12,
+          //           color: _selectedIndex == 3 ? Colors.green : Colors.grey)),
+          // ),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.settings,
+          //         size: _selectedIndex == 4 ? 26 : null,
+          //         color: _selectedIndex == 4 ? Colors.green : Colors.grey),
+          //     title: Text('Settings',
+          //         style: TextStyle(
+          //             fontSize: _selectedIndex == 4 ? 14 : 12,
+          //             color: _selectedIndex == 4 ? Colors.green : Colors.grey)))
         ],
       ),
     );
