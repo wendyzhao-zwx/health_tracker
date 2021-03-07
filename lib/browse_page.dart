@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:health_tracker/browse_page_second/body_measurements.dart';
+import 'package:health_tracker/browse_page_second/conditions.dart';
+import 'package:health_tracker/browse_page_second/daily_activity.dart';
+import 'package:health_tracker/browse_page_second/exercise.dart';
+import 'package:health_tracker/browse_page_second/health_data.dart';
+import 'package:health_tracker/browse_page_second/period.dart';
+import 'package:health_tracker/browse_page_second/sleep.dart';
 
 class BrowsePage extends StatefulWidget {
   BrowsePage({Key key}) : super(key: key);
@@ -12,7 +19,7 @@ class _BrowsePageState extends State<BrowsePage> {
     "  Daily Activity  ",
     "  Exercise  ",
     "  Body Measurements  ",
-    "  Body Condition  ",
+    "  Conditions  ",
     "  Health Data  ",
     "  Sleep  ",
     "  Period  ",
@@ -26,6 +33,16 @@ class _BrowsePageState extends State<BrowsePage> {
     Icons.insert_chart,
     Icons.bedtime_rounded,
     Icons.invert_colors_rounded,
+  ];
+
+  final List<Widget> browse = <Widget>[
+    DailyActivity(),
+    Excercise(),
+    BodyMeasurements(),
+    Conditions(),
+    HealthData(),
+    Sleep(),
+    Period()
   ];
 
   @override
@@ -147,21 +164,25 @@ class _BrowsePageState extends State<BrowsePage> {
                         ]),
                   )),
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute<void>(
-                      builder: (BuildContext context) {
-                        return Scaffold(
-                          appBar: AppBar(title: Text('My Page')),
-                          body: Center(
-                            child: FlatButton(
-                              child: Text('POP'),
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                            ),
-                          ),
-                        );
-                      },
-                    ));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => browse[index]),
+                      // MaterialPageRoute<void>(
+                      //   builder: (BuildContext context) {
+                      //     return Scaffold(
+                      //       appBar: AppBar(title: Text(titles[index])),
+                      //       body: Center(
+                      //         child: FlatButton(
+                      //           child: Text('POP'),
+                      //           onPressed: () {
+                      //             Navigator.pop(context);
+                      //           },
+                      //         ),
+                      //       ),
+                      //     );
+                      //   },
+                      // )
+                    );
                   },
                 ));
           }),
